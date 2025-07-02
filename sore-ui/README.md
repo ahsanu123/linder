@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/a3399c72-cc21-4a8b-98de-30176289bd95)
+
+
 # Slint Rust Template
 
 A template for a Rust application that's using [Slint](https://slint.rs/) for the user interface.

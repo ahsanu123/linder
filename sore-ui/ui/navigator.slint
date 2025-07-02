@@ -1,13 +1,11 @@
 import { SoreWindowGlobal, NavigatorSideButton } from "WindowGlobal.slint";
 
 component SoreButton inherits Rectangle {
-    background: blueviolet;
+    background: #1B3C53;
+    width: SoreWindowGlobal.SideBarWidth;
+    height: SoreWindowGlobal.Height / 3;
 
-    Text {
-        padding-left: 50px;
-        padding-right: 50px;
-        text: "b";
-    }
+    @children
 }
 
 export component Navigator {
@@ -16,7 +14,16 @@ export component Navigator {
 
     VerticalLayout {
         alignment: start;
-        for button in NavigatorSideButton.SideButtons: sideButton := SoreButton { }
+        for svg in [
+            @image-url("assets/speedometer.svg"),
+            @image-url("assets/stack.svg"),
+            @image-url("assets/sun.svg"),
+        ]: sideButton := SoreButton {
+            Image {
+                source: svg;
+                colorize: white;
+            }
+        }
     }
 
     // HorizontalLayout {
