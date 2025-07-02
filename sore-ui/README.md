@@ -1,4 +1,5 @@
-![image](https://github.com/user-attachments/assets/a3399c72-cc21-4a8b-98de-30176289bd95)
+ 
+![image](https://github.com/user-attachments/assets/c5812f0c-e7f3-4b82-832a-b57788099e11)
 
 
 # Slint Rust Template

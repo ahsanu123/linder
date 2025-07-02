@@ -1,0 +1,31 @@
+import { SoreWindowGlobal  } from "WindowGlobal.slint";
+import { Theme } from "GlobalStyles.slint";
+
+export component About {
+    VerticalLayout {
+        alignment: center;
+        HorizontalLayout {
+            alignment: center;
+            padding-top: 10px;
+            Image {
+                width: SoreWindowGlobal.Width - SoreWindowGlobal.SideBarWidth - 85px;
+                height: SoreWindowGlobal.Height - 55px;
+                source: @image-url("assets/sun.svg");
+                colorize: @linear-gradient(317deg, rgba(209, 0, 0, 1) 0%, rgba(255, 145, 0, 1) 100%);
+                image-fit: contain;
+                rotation-angle: abs(sin(360deg * animation-tick() / 5s)) * 40deg;
+                animate rotation-angle {
+                    easing: ease-in-out-circ;
+                    direction: alternate;
+                }
+            }
+        }
+
+        Text {
+            horizontal-alignment: center;
+            font-size: Theme.H3;
+            font-weight: 800;
+            text: "SORE - Solder Reflow";
+        }
+    }
+}

@@ -1,0 +1,42 @@
+import { SoreWindowGlobal } from "WindowGlobal.slint";
+import { Theme } from "GlobalStyles.slint";
+
+component BottomInfo inherits Rectangle {
+    background: Theme.Secondary;
+    width: SoreWindowGlobal.Width - SoreWindowGlobal.SideBarWidth;
+    x: SoreWindowGlobal.SideBarWidth;
+
+    Text {
+        x: parent.width - 100px;
+        text: "20 seconds";
+        color: Theme.Forsier;
+    }
+
+    Image {
+        x: parent.x + 10px;
+        source: @image-url("assets/plane.svg");
+        colorize: white;
+    }
+}
+
+export component OverviewPage {
+    VerticalLayout {
+        HorizontalLayout {
+            alignment: center;
+            padding-top: 20px;
+            Text {
+                font-size: Theme.H1;
+                color: #e3222c;
+                font-weight: 800;
+                text: "358°C";
+            }
+        }
+
+        HorizontalLayout {
+            alignment: start;
+            height: 30px;
+
+            BottomInfo { }
+        }
+    }
+}

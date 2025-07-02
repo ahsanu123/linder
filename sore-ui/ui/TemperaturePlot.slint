@@ -1,0 +1,11 @@
+import { SoreWindowGlobal } from "WindowGlobal.slint";
+
+// TODO: make plot that get data from rust, 
+// than display it with path command
+export component TemperaturePlot inherits Path {
+    width: SoreWindowGlobal.Width - SoreWindowGlobal.SideBarWidth;
+    x: SoreWindowGlobal.SideBarWidth;
+    commands: "M 10,30 A 20,20 0,0,1 50,30 A 20,20 0,0,1 90,30 Q 90,60 50,90 Q 10,60 10,30 z";
+    stroke: red;
+    stroke-width: 3px;
+}

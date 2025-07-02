@@ -1,0 +1,12 @@
+import { SoreWindowGlobal, NavigatorSideButton } from "WindowGlobal.slint";
+import {Theme} from "GlobalStyles.slint";
+
+export component MainWindow inherits Rectangle {
+    x: SoreWindowGlobal.SideBarWidth;
+    width: SoreWindowGlobal.Width - SoreWindowGlobal.SideBarWidth;
+    background: Theme.Forsier;
+
+    HorizontalLayout {
+        @children
+    }
+}

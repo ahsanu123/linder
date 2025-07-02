@@ -1,12 +1,9 @@
 import { SoreWindowGlobal, NavigatorSideButton } from "WindowGlobal.slint";
-
-component SoreButton inherits Rectangle {
-    background: #1B3C53;
-    width: SoreWindowGlobal.SideBarWidth;
-    height: SoreWindowGlobal.Height / 3;
-
-    @children
-}
+import { Theme } from "GlobalStyles.slint";
+import { SoreButton } from "SoreButtton.slint";
+import { MainWindow } from "MainWindow.slint";
+import { OverviewPage } from "Overview.slint";
+import { About } from "About.slint";
 
 export component Navigator {
     x: 0;
@@ -26,9 +23,8 @@ export component Navigator {
         }
     }
 
-    // HorizontalLayout {
-    //     Text {
-    //         text: "HorizontalLayout";
-    //     }
-    // }
+    MainWindow {
+        About { }       
+        // OverviewPage { }
+    }
 }
