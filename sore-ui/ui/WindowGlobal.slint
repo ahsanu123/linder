@@ -1,0 +1,18 @@
+enum SideButtonEnum {
+    Overview, 
+    PresetList, 
+    About
+}
+
+export global SoreWindowGlobal {
+    out property <length> Width: 320px;
+    out property <length> Height: 172px;
+}
+
+export global NavigatorSideButton {
+    out property <[SideButtonEnum]> SideButtons: [
+        SideButtonEnum.Overview,
+        SideButtonEnum.PresetList,
+        SideButtonEnum.About,
+    ];
+}

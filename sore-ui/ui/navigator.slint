@@ -1,0 +1,27 @@
+import { SoreWindowGlobal, NavigatorSideButton } from "WindowGlobal.slint";
+
+component SoreButton inherits Rectangle {
+    background: blueviolet;
+
+    Text {
+        padding-left: 50px;
+        padding-right: 50px;
+        text: "b";
+    }
+}
+
+export component Navigator {
+    x: 0;
+    y: 0;
+
+    VerticalLayout {
+        alignment: start;
+        for button in NavigatorSideButton.SideButtons: sideButton := SoreButton { }
+    }
+
+    // HorizontalLayout {
+    //     Text {
+    //         text: "HorizontalLayout";
+    //     }
+    // }
+}
